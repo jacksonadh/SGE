@@ -3,11 +3,10 @@
 
     if(isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])){
         require("acoes/conexao.php");
-
         $adm  = $_SESSION["usuario"][1];
         $nome = $_SESSION["usuario"][0];
     }else{
-        echo "<script>window.location = 'index.html'</script>";
+        echo "<script>window.location = 'login.html'</script>";
     }
 ?>
 <html>
@@ -16,6 +15,7 @@
     </head>
     <body>
         <?php if($adm): ?>
+            <h2>Usuario Adm</h2>
             <table width="40%">
                 <thead>
                     <tr style="font-weight: bold">
