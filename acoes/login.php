@@ -13,9 +13,9 @@
 
             echo "<script>window.location = '../dashboard.php'</script>";
         }else{
-            echo "<script>window.location = '../index.html'</script>";
+            echo json_encode(array("erro"=> 1, "mensagem" => "Email e/ou senha incorretos."));
         }
     }else{
-        echo "<script>window.location = '../index.html'</script>";
+        echo json_encode(array("erro"=> 1, "mensagem" => "Ocorreu um erro interno no servidor."));
     }
 ?>

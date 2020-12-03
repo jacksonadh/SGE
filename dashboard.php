@@ -12,8 +12,10 @@
 <html>
     <head>
         <title>Dashboard - <?php echo $nome; ?></title>
+        <link href="bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="login.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="text-center">
         <?php if($adm): ?>
             <h2>Usuario Adm</h2>
             <table width="40%">

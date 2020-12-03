@@ -11,6 +11,7 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: #303030;
+  color: blanchedalmond;
 }
 
 .form-signin {
@@ -33,14 +34,10 @@ body {
   z-index: 2;
 }
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  margin-bottom: 5px;
 }
 .form-signin input[type="password"] {
   margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 .btn-login {
     background-color: #dcb824;
@@ -55,4 +52,10 @@ body {
 }
 .h3{
     color: blanchedalmond;
+}
+a{
+  color: white;
+}
+a:focus:hover{
+  color: blanchedalmond;
 }
