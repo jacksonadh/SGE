@@ -7,17 +7,17 @@ $(function(){
             url: "acoes/login.php",
             type: "POST",
             data: {
-                email: campoEmail,
-                senha: campoSenha
+                inputEmail: campoEmail,
+                inputPassword: campoSenha
             },
             sucess: function(retorno){
                 retorno = JSON.parse(retorno);
                 if(retorno["erro"]){
                     $("div#mensagem").html(retorno["mensagem"]);
                 }else{
-
+                    window.location = "dashboard.php"
                 }
-                console.log(retorno);
+               
             }
         })
     })

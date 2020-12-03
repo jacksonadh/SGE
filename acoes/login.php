@@ -10,8 +10,7 @@
             print_r($user);
             session_start();
             $_SESSION["usuario"] = array($user["nome"], $user["adm"]);
-
-            echo "<script>window.location = '../dashboard.php'</script>";
+            echo json_encode(array("erro"=> 0));
         }else{
             echo json_encode(array("erro"=> 1, "mensagem" => "Email e/ou senha incorretos."));
         }
