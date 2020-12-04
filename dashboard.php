@@ -6,7 +6,7 @@
         $adm  = $_SESSION["usuario"][1];
         $nome = $_SESSION["usuario"][0];
     }else{
-        echo "<script>window.location = 'login.html'</script>";
+        echo "<script>window.location = 'index.html'</script>";
     }
 ?>
 <html>
