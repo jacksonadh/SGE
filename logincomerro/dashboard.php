@@ -3,7 +3,6 @@
 
     if(isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])){
         require("acoes/conexao.php");
-
         $adm  = $_SESSION["usuario"][1];
         $nome = $_SESSION["usuario"][0];
     }else{
@@ -13,9 +12,12 @@
 <html>
     <head>
         <title>Dashboard - <?php echo $nome; ?></title>
+        <link href="bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="login.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="text-center">
         <?php if($adm): ?>
+            <h2>Usuario Adm</h2>
             <table width="40%">
                 <thead>
                     <tr style="font-weight: bold">

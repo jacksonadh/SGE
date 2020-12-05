@@ -7,15 +7,14 @@
 
         if($query->rowCount()){
             $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
-
+            print_r($user);
             session_start();
             $_SESSION["usuario"] = array($user["nome"], $user["adm"]);
-
-            echo json_encode(array("erro" => 0));
+            echo json_encode(array("erro"=> 0));
         }else{
-            echo json_encode(array("erro" => 1, "mensagem" => "Email e/ou senha incorretos."));
+            echo json_encode(array("erro"=> 1, "mensagem" => "Email e/ou senha incorretos."));
         }
     }else{
-        echo json_encode(array("erro" => 1, "mensagem" => "Ocorreu um erro interno no servidor."));
+        echo json_encode(array("erro"=> 1, "mensagem" => "Ocorreu um erro interno no servidor."));
     }
 ?>

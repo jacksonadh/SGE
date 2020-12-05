@@ -1,10 +1,8 @@
 $(function(){
-    $("button#btnEntrar").on("click", function(e){
+      $("button#btn-entrar").on("click", function(e){
         e.preventDefault();
-
-        var campoEmail = $("form#formularioLogin #email").val();
-        var campoSenha = $("form#formularioLogin #senha").val();
-
+        var campoEmail = $("form#formulario-login #inputEmail").val();
+        var campoSenha = $("form#formulario-login #inputPassword").val();
         if(campoEmail.trim() == "" || campoSenha.trim() == ""){
             $("div#mensagem").html("Preencha todos os campos.");
         }else{
@@ -15,7 +13,6 @@ $(function(){
                     email: campoEmail,
                     senha: campoSenha
                 },
-
                 success: function(retorno){
                     retorno = JSON.parse(retorno);
 
@@ -23,13 +20,13 @@ $(function(){
                         $("div#mensagem").html(retorno["mensagem"]);
                     }else{
                         window.location = "dashboard.php";
-                    }
+                    }           
                 },
-
                 error: function(){
-                    $("div#mensagem").html("Ocorreu um erro durante a solicitação");
+                    $("div#mensagem").html(retorno["Ocorreu um erro durante a solicitação"]);
                 }
             });
         }
-    });
+     });
+    
 });
