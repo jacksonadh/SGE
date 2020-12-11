@@ -1,0 +1,45 @@
+SELECT receita.valor_receita, receita.tipo_receita, despesa.valor_despesa, despesa.tipo_despesa
+FROM receita, despesa
+SELECT SUM(IF(tipo='r',valor,-valor )) AS saldo FROM saldo
+
+CREATE TABLE IF NOT EXISTS 'saldo'(
+	'id_saldo" int(6) unsigned NOT NULL,
+	'nome_receita' varchar(200) NOT NULL,
+	'valor_receita' int(8) NOT NULL,
+	'tipo_receita' varchar(1) DEFAULT VALUE 'r'
+	PRIMARY KEY ('id_receita')
+
+) DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS 'receita' (
+	'id_receita" int(6) unsigned NOT NULL,
+	'nome_receita' varchar(200) NOT NULL,
+	'valor_receita' int(8) NOT NULL,
+	'tipo_receita' varchar(1) DEFAULT VALUE 'r'
+	PRIMARY KEY ('id_receita')
+
+) DEFAULT CHARSET=utf8;
+
+INSERT INTO 'receita' ('id_receita','nome_receita','valor_receita') VALUES
+('1', Camisa, 55),
+('2', Calca, 100),
+('3', moleton, 70),
+('4', boné, 30);
+
+CREATE TABLE IF NOT EXISTS 'despesa'(
+	'id_despesa" int(6) unsigned NOT NULL,
+	'nome_despesa' varchar(200) NOT NULL,
+	'valor_despesa' int(8) NOT NULL,
+	'tipo_receita' varchar(1) DEFAULT VALUE 'd'
+	PRIMARY KEY ('id_despesa')
+
+) DEFAULT CHARSET=utf8;
+
+INSERT INTO 'despesa' ('id_despesa','nome_despesa','valor_depesa') VALUES
+('1', agua, 45),
+('2', luz, 100),
+('3', telefone, 30),
+('4', aluguel,300);
+
+
+SELECT SUM( IF( operacao='01', valor, -valor ) ) AS saldo FROM tabela
