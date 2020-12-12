@@ -18,8 +18,23 @@ CREATE TABLE 'transacoes' (
 CREATE TABLE 'categoria' (
 	'id_categoria' int (6) unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
 	'descricao_categoria' varchar(40) NOT NULL,
+	''
 
 )DEFAULT CHARSET=utf8;
+
+--TABELA CONTA
+
+CREATE TABLE 'conta' (
+	'id_conta' int (6) unsigned PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	'banco' varchar(40) NOT NULL,
+	'agencia' int (20) NOT NULL,
+	'numero_conta' int (20) NOT NULL,
+	'tipo_conta' varchar(40) NOT NULL,
+	'saldo_conta' int (40) NOT NULL,
+
+)DEFAULT CHARSET=utf8;
+
+
 /*Valor	Inteiro
 Data	date
 Categoria	texto
