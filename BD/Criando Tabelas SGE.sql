@@ -9,8 +9,6 @@ CREATE TABLE transacoes (
 	id_categoria int (6) NOT NULL,
 	id_conta int(6) NOT NULL
 
-	ADD CONSTRAINT fk_CatTrans FOREING KEY (id_categoria) REFERENCES categoria (id_categoria);
-	ADD CONSTRAINT fk_ContaTrans FOREING KEY (id_conta) REFERENCES conta (id_conta);
 )DEFAULT CHARSET=utf8;
 
 --TABELA CATEGORIA
@@ -32,9 +30,33 @@ CREATE TABLE conta (
 
 )DEFAULT CHARSET=utf8;
 
+	--INSERINDO DADOS NAS TABELAS
+	INSERT INTO transacoes VALUES
+	(1,'c','2020-11-10','sim','JP supermercado',150,1,1),
+	(2,'d','2020-13-10','sim','Tele1',50,2,2),
+	(3,'c','2020-19-10','sim','Federal Car',180,3,3),
+	(4,'d','2020-21-10','sim','Ninha Casa',350,4,4);
 
-	ALTER TABLE transacoes ADD CONSTRAINT fk_CatTrans FOREING KEY (id_categoria) REFERENCES categoria (id_categoria);
-	ALTER TABLE transacoes ADD CONSTRAINT fk_ContaTrans FOREING KEY (id_conta) REFERENCES conta (id_conta);
+	INSERT INTO categoria VALUES
+	(1,'supermercado','c'),
+	(2,'internet','d'),
+	(3,'seguro','c'),
+	(4,'aluguel','d');
+
+	INSERT INTO conta VALUES
+	(1,'Itau',6283,046784,'c',58),
+	(2,'Caixa',2119,124532,'c',2000),
+	(3,'Brasil',1231,00123,'p',0),
+	(4,'Bradesco',3020,505541,'p',125);
+
+	ALTER TABLE transacoes
+	ADD FOREIGN KEY (id_categoria)
+	REFERENCES categoria (id_categoria);
+
+	ALTER TABLE conta
+	ADD FOREIGN KEY (id_conta)
+	REFERENCES conta (id_conta);
+
 /*
 SELECT campos FROM tabela1 join tabela2 on pk=fk;
 SELECT SUM( IF( tipo_transacoes='r', valor, -valor ) ) AS saldo FROM transacoes*/
