@@ -1,0 +1,69 @@
+body{
+    background-color: #ffe285;
+    text-align: center;
+}
+.rodape{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background: #000000;
+    color: white;
+}
+.receita{
+    background-color:#006600;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 150px;
+    height: 200px;
+    width: 200px;
+}
+.despesa{
+    background-color:#953735;
+    border-radius: 30px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+}
+.col-md-10{
+    margin-top: 10px;
+}
+.saldo{
+    background-color: #17375e;
+    border-radius: 30px;
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+}
+.teste{
+    display: flex;
+}
+.conteudo{
+    
+    top: 10%;
+}
+#content {
+    -webkit-transition: width 0.3s ease;
+    -moz-transition: width 0.3s ease;
+    -o-transition: width 0.3s ease;
+    transition: width 0.3s ease;
+    text-align: center;
+    
+}
+#sidebar {
+    position: relative;
+    -webkit-transition: margin 0.3s ease;
+    -moz-transition: margin 0.3s ease;
+    -o-transition: margin 0.3s ease;
+    transition: margin 0.3s ease;
+    background:#303030;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    
+}
+img{
+    vertical-align: center;
+}
+.perfil{
+    text-align: center;
+}

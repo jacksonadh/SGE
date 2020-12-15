@@ -48,7 +48,8 @@ CREATE TABLE conta (
 	(2,'Caixa',2119,124532,'c',2000),
 	(3,'Brasil',1231,00123,'p',0),
 	(4,'Bradesco',3020,505541,'p',125);
-
+	
+	--CRIANDO RELACIONAMENTOS
 	ALTER TABLE transacoes
 	ADD FOREIGN KEY (id_categoria)
 	REFERENCES categoria (id_categoria);
