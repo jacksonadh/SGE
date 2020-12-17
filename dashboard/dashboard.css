@@ -1,53 +1,146 @@
 body{
     background-color: #ffe285;
     text-align: center;
+    font-family: Roboto,'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#nav-titulo{
+    justify-content: center;
+}
+.titulo{
+    display:inline-flex;
+    font-size: 40px;
+    margin: 0;
+}
+.bg-fundo {
+    background-image: url("../img/charging-bull-png-1-original.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    opacity: 0.1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 .rodape{
     position: fixed;
     bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     background: #000000;
     color: white;
+    padding: 15px;
 }
-.receita{
-    background-color:#006600;
+#receita{
+    background-color:#006600d7;
     border-radius: 30px;
-    display: inline-block;
-    margin-top: 150px;
     height: 200px;
     width: 200px;
+    display: inline-block;
+    border-style: solid;
+    border-color: #006600d7;
+    border-width: 2px;
+    outline: none;
 }
-.despesa{
+#receita:hover{
+    background-color:#009600;
+    border-radius: 30px;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    outline: none;
+    border-style: solid;
+    border-color: #006600d7;
+    border-width: 2px;
+}
+#despesa{
     background-color:#953735;
     border-radius: 30px;
-    display: inline-block;
     height: 200px;
     width: 200px;
+    display: inline-block;
+    border-style: solid;
+    border-color: #953735;
+    border-width: 2px;
+    outline: none;
+}
+#despesa:hover{
+    background-color:#ac1f1c;
+    border-radius: 30px;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    border-style: solid;
+    border-color: #953735;
+    border-width: 2px;
+    outline: none;
+}
+#saldo{
+    background-color: #17375e;
+    border-radius: 30px;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    border-style: solid;
+    border-color: #17375e;
+    border-width: 2px;
+    outline: none;
+}
+
+#saldo:hover{
+    background-color: #042c5e;
+    border-radius: 30px;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+    border-style: solid;
+    border-color: #17375e;
+    border-width: 2px;
+    outline: none;
 }
 .col-md-10{
     margin-top: 10px;
-}
-.saldo{
-    background-color: #17375e;
-    border-radius: 30px;
-    display: inline-block;
-    height: 200px;
-    width: 200px;
-}
-.teste{
-    display: flex;
+    padding: 25px;
 }
 .conteudo{
-    
-    top: 10%;
+    margin-top: 5%;
+    border-style: none;
 }
-#content {
+.btn-sair{
+    background: #ffc000;
+    border-radius: 10px;
+    outline: none;
+    font-family: Roboto,'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+    border-color: #ffc000;
+    border-width: 2px;
+}
+.btn-sair:hover{
+    background: #f8df02;
+    border-radius: 10px;
+    outline: none;
+    font-family: Roboto,'Open Sans', 'Helvetica Neue', sans-serif;
+    border-style: solid;
+    border-color: #ffc000;
+    border-width: 2px;
+}
+
+.content {
     -webkit-transition: width 0.3s ease;
     -moz-transition: width 0.3s ease;
     -o-transition: width 0.3s ease;
     transition: width 0.3s ease;
     text-align: center;
-    
+    margin-left: 10px;
+    margin-right: 10px;
+    color:white;
 }
 #sidebar {
     position: relative;
@@ -59,11 +152,12 @@ body{
     height: 100vh;
     text-align: center;
     color: white;
-    
 }
 img{
     vertical-align: center;
 }
 .perfil{
     text-align: center;
+    margin-top: 10px;
+    padding: 25px;
 }

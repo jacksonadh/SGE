@@ -59,5 +59,11 @@ CREATE TABLE conta (
 	REFERENCES conta (id_conta);
 
 /*
+SELECT data_transacoes, descricao_transacoes, valor_transacoes, id_categoria, id_conta FROM transacoes WHERE tipo_transacoes='c'
 SELECT campos FROM tabela1 join tabela2 on pk=fk;
-SELECT SUM( IF( tipo_transacoes='r', valor, -valor ) ) AS saldo FROM transacoes*/
+SELECT campos FROM tabela1 JOIN tabela2 on pk=fk JOIN tabela3 on PK=FK
+SELECT SUM( IF( tipo_transacoes='c', valvalor_transacoesor, -valor_transacoes ) ) AS saldo FROM transacoes
+SELECT SUM( IF( tipo_transacoes='c', valor_transacoes, -valor_transacoes ) ) AS saldo FROM transacoes WHERE tipo_transacoes='c'
+SELECT SUM (valor_transacoes) as total FROM transacoes WHERE tipo_transacoes='c';
+*/
+
